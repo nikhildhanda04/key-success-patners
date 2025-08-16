@@ -13,7 +13,7 @@ export default function ContactUs() {
 
 
 
-            <form className='flex flex-col justify-between gap-8 bg-stone-100 dark:bg-stone-800 border border-neutral-300 shadow-[0px_7px_12px_rgba(0,0,0,0.1)] px-12 pb-36 py-12 rounded-3xl mr-36'>
+            <form className='flex flex-col justify-between gap-8 bg-stone-100 dark:bg-neutral-800 border border-neutral-300 shadow-[0px_7px_12px_rgba(0,0,0,0.1)] px-12 pb-36 py-12 rounded-3xl mr-36'>
 
                 <div className='flex flex-row gap-6 w-full'>
                     <input 

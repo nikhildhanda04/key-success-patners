@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { easeIn, motion } from 'framer-motion'; 
 import { Moon, Sun } from 'lucide-react';
-import Image from 'next/image'
 
 export default function Hero() {
 
@@ -30,14 +29,14 @@ export default function Hero() {
 
   return(
     <>
-<div className="min-h-screen w-full relative">
+{/* <div className="min-h-screen w-full relative">
 
 <div
   className="absolute inset-0 z-0 transition-colors duration-200"
   style={{
     background: isDark
       ? "radial-gradient(125% 125% at 50% 10%, #000000 40%, #010133 100%)"
-      : "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
+      : "radial-gradient(125% 125% at 50% 10%, rgba(255, 255, 255, 0.6) 40%, rgba(99, 102, 241, 0.6) 100%)",
   }}
 />
 
@@ -81,7 +80,7 @@ export default function Hero() {
           animate={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.8, ease: easeIn}}
           className="text-[#666666] tracking-tight text-xl pr-40 text-left">
-            with our expertise you get the placement that is bets suited for you.
+            with our expertise you get the placement that is best suited for you.
           </motion.div>
           </div>
 
@@ -102,7 +101,63 @@ export default function Hero() {
     </div>
 
 
-</div>
+</div> */}
+<div
+  className="flex flex-col items-start px-32 py-68 min-h-screen gap-18 relative"
+  style={{ position: "relative" }}
+>
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: "url(/hero2.jpg)",
+      WebkitMaskImage: "linear-gradient(to right, transparent, white)",
+      maskImage: "linear-gradient(to right, transparent, white)",
+    }}
+  ></div>
+
+      <motion.div 
+          initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          animate={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.5, ease: easeIn}}
+          className="flex flex-row gap-1">
+            <div className="bg-primary px-7 py-3 rounded-full text-white  text-lg font-medium ">
+              we value you
+            </div>
+                <button
+                    className="bg-stone-200 dark:bg-stone-800 rounded-full px-4 py-3 ml-4 flex items-center justify-center transition-colors duration-200"
+                    onClick={toggleTheme}
+                    aria-label="Toggle dark mode"
+                    type="button"
+                >
+                    {isDark ? (
+                        <Sun className="inline" size={20} color="#FAF9F6" />
+                    ) : (
+                        <Moon className="inline" size={20} color="#09090B" />
+                    )}
+                </button>
+          </motion.div>
+
+                    <div className="flex flex-col gap-8">
+          <motion.div 
+          initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          animate={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.6, ease: easeIn}}
+          className="text-dark tracking-tight dark:text-light leading-20 text-7xl font-semibold">
+            Helping you reach <br /> right opportunities
+          </motion.div>
+
+          <motion.div 
+          initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          animate={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.8, ease: easeIn}}
+          className="text-stone-500 dark:text-stone-300 tracking-tight text-xl pr-40 text-left">
+            with our expertise you get the placement <br/> that is best suited for you.
+          </motion.div>
+          </div>
+
+
+
+    </div>
     </>
   )
 }
