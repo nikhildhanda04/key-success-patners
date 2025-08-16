@@ -1,7 +1,7 @@
 export default function Footer() {
     return(
         <>
-        <div className="flex flex-col bg-primary/[0.9] mask-b-from-80% overflow-hidden">
+        <div className="flex flex-col bg-primary/[0.9] mask-b-from-85% overflow-hidden">
 
         <div className="flex flex-row font-primary justify-between text-light px-36 py-20">
             <div className="text-3xl  font-medium">

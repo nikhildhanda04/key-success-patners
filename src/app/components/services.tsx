@@ -1,5 +1,6 @@
-
+'use client'
 import { cardsData } from './cardData'
+import { motion } from 'framer-motion';
 import Image from 'next/image'
 
 export default function Services() {
@@ -7,13 +8,21 @@ export default function Services() {
     <>
     <div className="flex flex-col  gap-24  px-32 py-28 ">
 
-      <div className="flex flex-row font-primary text-primary text-5xl font-medium">
+      <motion.div 
+          initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.5}}
+      className="flex flex-row font-primary text-primary text-5xl font-medium">
         Our Services <span></span>
-      </div>
+      </motion.div>
 
       <div className="flex flex-col gap-28 items-center justify-center">
           
-          <div className="flex flex-row justify-between gap-52">
+          <motion.div 
+                    initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.6}}
+          className="flex flex-row justify-between px-12 gap-52">
 
             <div className="font-primary text-2xl text-black dark:text-white">
               we offer a wide range of services
@@ -22,18 +31,23 @@ export default function Services() {
               we are ready to meet your requirements using our cutting edge tech
             </div>
 
-          </div>
+          </motion.div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <motion.div 
+              initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.7}}
+    className="grid grid-cols-1 md:grid-cols-2 px-12 gap-12">
       {cardsData.map((card, index) => {
         const Icon = card.icon;
         return (
-          <div
+          <motion.div
+
             key={index}
-            className={`flex flex-col ${card.layout} ${card.colSpan} bg-gradient-to-b from-[#B6DBFF]/[0.5] to-[#EAEAEA]/[0.5] dark:from-[#A7D4FF]/[0.2] dark:to-[#08070E] border-stone-300 dark:border-stone-600 px-12 py-12 items-start rounded-lg shadow-[0px_7px_20px_rgba(0,0,0,0.19)] dark:shadow-[0px_10px_45px_rgba(255,255,255,0.3)] hover:shadow-[0px_10px_20px_rgba(0,0,0,0.2)] dark:hover:shadow-[0px_10px_50px_rgba(255,255,255,0.3)] transition-all duration-200 easeInOut`}
+            className={`flex flex-col ${card.layout} ${card.colSpan} bg-gradient-to-b from-[#B6DBFF]/[0.5] to-[#EAEAEA]/[0.5] dark:from-[#A7D4FF]/[0.2] dark:to-[#08070E] border-stone-300 dark:border-stone-600 px-12 py-12 items-start rounded-lg shadow-[3px_4px_10px_rgba(0,0,0,0.19)] dark:shadow-[0px_7px_20px_rgba(255,255,255,0.2)] hover:shadow-[0px_7px_20px_rgba(0,0,0,0.2)] dark:hover:shadow-[0px_10px_20px_rgba(255,255,255,0.2)] transition-all duration-200 easeInOut`}
           >
             <div>
-              <div className="p-4 w-fit mt-8 rounded-lg bg-primary border">
+              <div className="p-4 w-fit mt-8 rounded-lg bg-primary shadow-[0px_3px_10px_rgba(0,0,0,0.3)]">
                 <Icon color="white" size="28" />
               </div>
               <div className="font-primary mt-4 text-dark dark:text-light font-medium text-xl">
@@ -53,10 +67,10 @@ export default function Services() {
           />
   </div>
       )}
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
 
     </div>
 
