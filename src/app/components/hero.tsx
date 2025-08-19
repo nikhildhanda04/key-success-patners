@@ -103,11 +103,11 @@ export default function Hero() {
 
 </div> */}
 <div
-  className="flex flex-col items-start px-32 py-68 min-h-screen gap-18 relative"
+  className="flex flex-col items-center text-center md:text-left md:items-start px-4 md:px-32 py-48 md:py-68 min-h-screen gap-8 md:gap-18 relative"
   style={{ position: "relative" }}
 >
   <div
-    className="absolute inset-0"
+    className="absolute inset-0 bg-cover bg-center md:bg-[length:100%_100%]"
     style={{
       backgroundImage: "url(/hero2.jpg)",
       WebkitMaskImage: "linear-gradient(to right, transparent, white)",
@@ -120,7 +120,7 @@ export default function Hero() {
           animate={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.5, ease: easeIn}}
           className="flex flex-row gap-1">
-            <div className="bg-primary px-7 py-3 rounded-full text-white  text-lg font-medium ">
+            <div className="bg-primary px-7 py-3 rounded-full text-white text-4  md:text-lg font-medium ">
               we value you
             </div>
                 <button
@@ -142,7 +142,7 @@ export default function Hero() {
           initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           animate={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.6, ease: easeIn}}
-          className="text-dark tracking-tight dark:text-light leading-20 text-7xl font-semibold">
+          className="text-dark tracking-tight dark:text-light md:leading-20 text-4xl md:text-7xl font-semibold">
             Helping you reach <br /> right opportunities
           </motion.div>
 
@@ -150,7 +150,7 @@ export default function Hero() {
           initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           animate={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.8, ease: easeIn}}
-          className="text-stone-500 dark:text-stone-300 tracking-tight text-xl pr-40 text-left">
+          className="text-stone-500 dark:text-stone-300 tracking-tight md:text-xl md:pr-40 text-center md:text-left">
             with our expertise you get the placement <br/> that is best suited for you.
           </motion.div>
           </div>

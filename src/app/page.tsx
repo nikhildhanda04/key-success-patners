@@ -3,6 +3,7 @@ import Hero from "./components/hero"
 import Services from "./components/services";
 import Features from "./components/features";
 import Quote from "./components/quote";
+import Queries from "./components/queries";
 import ContactUs from "./components/contactUs";
 import Footer from "./components/footer";
 
@@ -25,6 +26,9 @@ export default function Home() {
         </div>
         <div id="quote">
           <Quote />
+        </div>
+        <div id="queries">
+          <Queries />
         </div>
         <div id="contact">
           <ContactUs />

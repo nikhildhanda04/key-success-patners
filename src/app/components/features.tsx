@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function Features() {
     return(
         <>
-        <div className="bg-primary/[0.9] px-32 py-36 flex flex-row">
+        <div className="bg-primary/[0.9] px-4 md:px-32 py-36 flex flex-col md:flex-row">
 
         <div className="flex flex-col gap-12 tracking-tight font-primary text-light">
             <motion.div 
@@ -19,12 +19,12 @@ export default function Features() {
                       initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.6}}
-            className="text-2xl pr-36 text-stone-300">
+            className="text-2xl pr-36 mb-16 md:mb-0 text-stone-300">
                 these are the industries that we currently have under our eye
             </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
             <motion.div 
           initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
@@ -35,7 +35,7 @@ export default function Features() {
                     01.
                 </div>
                 <div className="text-3xl ">
-                    Information Technology
+                    Information <br /> Technology
                 </div>
             </motion.div>
 
@@ -74,7 +74,7 @@ export default function Features() {
                     04.
                 </div>
                 <div className="text-3xl ">
-                    Project Management
+                    Project <br /> Management
                 </div>
             </motion.div>
             

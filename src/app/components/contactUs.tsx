@@ -3,19 +3,19 @@ import { Phone, MapPin, Mail} from 'lucide-react'
 export default function ContactUs() {
     return (
         <>
-        <div className="flex flex-col gap-24 px-32 py-28">
+        <div className="flex flex-col items-center gap-24 px-4 md:px-32 py-36">
 
             <div className="font-primary text-primary text-5xl font-medium">
                 Contact Us
             </div>
 
-            <div className='flex flex-row'>
+            <div className='flex flex-col md:flex-row'>
 
 
 
-            <form className='flex flex-col justify-between gap-8 bg-stone-100 dark:bg-neutral-800 border border-neutral-300 shadow-[0px_7px_12px_rgba(0,0,0,0.1)] px-12 pb-36 py-12 rounded-3xl mr-36'>
+            <form className='flex flex-col justify-between gap-8 bg-stone-100 dark:bg-neutral-800 border border-neutral-300 shadow-[0px_7px_12px_rgba(0,0,0,0.1)] px-4 md:px-12 pb-36 py-12 rounded-3xl md:mr-36'>
 
-                <div className='flex flex-row gap-6 w-full'>
+                <div className='flex flex-col md:flex-row gap-6 w-full'>
                     <input 
                     placeholder='your name'
                     className='px-7 py-3 bg-white rounded-xl'
@@ -39,7 +39,7 @@ export default function ContactUs() {
 
             </form>
 
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 mt-12 md:mt-0">
 
                 <div className="flex flex-col font-primary px-9 py-7 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-400 rounded-2xl shadow-[0px_7px_10px_rgba(0,0,0,0.2)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">

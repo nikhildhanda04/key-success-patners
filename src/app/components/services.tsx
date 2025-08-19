@@ -6,14 +6,14 @@ import Image from 'next/image'
 export default function Services() {
   return(
     <>
-    <div className="flex flex-col  gap-24  px-32 py-28 ">
+    <div className="flex flex-col items-center md:items-start gap-24 px-4 md:px-32 py-28 ">
 
       <motion.div 
           initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.5}}
-      className="flex flex-row font-primary text-primary text-5xl font-medium">
-        Our Services <span></span>
+      className="flex md:flex-row font-primary text-primary text-5xl font-medium">
+        Our Services 
       </motion.div>
 
       <div className="flex flex-col gap-28 items-center justify-center">
@@ -22,12 +22,12 @@ export default function Services() {
                     initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.6}}
-          className="flex flex-row justify-between px-12 gap-52">
+          className="flex flex-col md:flex-row justify-between px-12 gap-6 md:gap-52">
 
             <div className="font-primary text-2xl text-black dark:text-white">
               we offer a wide range of services
             </div>
-            <div className="font-primary text-xl px-20 text-zinc-400">
+            <div className="font-primary text-xl md:px-20 text-zinc-400">
               we are ready to meet your requirements using our cutting edge tech
             </div>
 
@@ -37,7 +37,7 @@ export default function Services() {
               initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.7}}
-    className="grid grid-cols-1 md:grid-cols-2 px-12 gap-12">
+    className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-12 gap-12">
       {cardsData.map((card, index) => {
         const Icon = card.icon;
         return (
