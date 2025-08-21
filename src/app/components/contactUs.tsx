@@ -1,70 +1,94 @@
-import { Phone, MapPin, Mail} from 'lucide-react'
+'use client'
 
+import { Phone, MapPin, Mail} from 'lucide-react'
+import { useState } from 'react';
+import {motion } from 'framer-motion'
+ 
 export default function ContactUs() {
+
+    const [message, setMessage] = useState("");
+
+
+    const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = "";
+    const subject = encodeURIComponent("Let's Connect");
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
+
     return (
         <>
-        <div className="flex flex-col items-center gap-24 px-4 md:px-32 py-36">
+        <div className="flex flex-col md:items-start items-center gap-24 px-4 md:px-32 py-36">
 
-            <div className="font-primary text-primary text-5xl font-medium">
+            <motion.div 
+                          initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.5}}
+            className="font-primary text-primary text-5xl font-medium">
                 Contact Us
-            </div>
+            </motion.div>
 
             <div className='flex flex-col md:flex-row'>
 
 
 
-            <form className='flex flex-col justify-between gap-8 bg-stone-100 dark:bg-neutral-800 border border-neutral-300 shadow-[0px_7px_12px_rgba(0,0,0,0.1)] px-4 md:px-12 pb-36 py-12 rounded-3xl md:mr-36'>
+            <motion.form 
+            onSubmit={handleSubmit}
+                          initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
+          whileInView={{y:0, opacity:1, filter: "blur(0px)"}}
+          transition={{duration: 0.7}}
+            className='flex flex-col justify-between gap-8 bg-stone-100 dark:bg-neutral-800 border border-neutral-300 shadow-[0px_7px_12px_rgba(0,0,0,0.1)] px-4 md:px-12 pb-36 py-12 rounded-3xl md:mr-36'>
 
                 <div className='flex flex-col md:flex-row gap-6 w-full'>
                     <input 
                     placeholder='your name'
                     className='px-7 py-3 bg-white rounded-xl'
+                    required
                     />
                     <input 
                     placeholder='your email'
                     className='px-7 py-3 bg-white rounded-xl'
+                    required
                     />
                 </div>
 
                 <textarea 
                 placeholder='your message'
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className='px-7 py-10 bg-white rounded-xl'
+                required
                 />
 
                 <div>
-                <button className='bg-primary text-white font-primary items-start px-12 py-3 rounded-3xl'>
+                <button 
+                type='submit'
+                className='bg-primary text-white font-primary items-start px-12 py-3 rounded-3xl'>
                     Send
                 </button>
                 </div>
 
-            </form>
+            </motion.form>
 
             <div className="flex flex-col gap-12 mt-12 md:mt-0">
 
-                <div className="flex flex-col font-primary px-9 py-7 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-400 rounded-2xl shadow-[0px_7px_10px_rgba(0,0,0,0.2)]">
+                <div className="flex flex-col font-primary px-9 py-8 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-200 rounded-2xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">
                         <Phone size="32"/> +123456-789
                     </div>
-                    <div>
-                        contact us on our helpline number
-                    </div>
                 </div>
 
-                <div className="flex flex-col font-primary px-9 py-7 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-400 rounded-2xl shadow-[0px_7px_10px_rgba(0,0,0,0.2)]">
+                <div className="flex flex-col font-primary px-9 py-8 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-300 rounded-2xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">
                         <Mail size="32"/> abc@gmail.com
                     </div>
-                    <div>
-                        contact us on our helpline number
-                    </div>
                 </div>
 
-                <div className="flex flex-col font-primary px-9 py-7 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-400 rounded-2xl shadow-[0px_7px_10px_rgba(0,0,0,0.2)]">
+                <div className="flex flex-col font-primary px-9 py-8 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-300 rounded-2xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">
                         <MapPin size="32"/> Mumbai, India
-                    </div>
-                    <div>
-                        contact us on our helpline number
                     </div>
                 </div>
 

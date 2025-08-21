@@ -1,4 +1,6 @@
 'use client'
+
+import Image from 'next/image'
 import { motion, AnimatePresence, Variants } from 'framer-motion'
 import { useState } from 'react'
 
@@ -16,7 +18,7 @@ export default function Navbar() {
     const navItems = [
         { id: 'home', label: 'Home' },
         { id: 'services', label: 'Services' },
-        { id: 'features', label: 'Jobs' },
+        { id: 'features', label: 'Industries' },
         { id: 'queries', label: 'Queries' },
         { id: 'contact', label: 'Contact Us' }
     ]
@@ -66,8 +68,15 @@ export default function Navbar() {
             transition={{ duration: 0.7 }}
             className="bg-[#FFFFFF]/[0.4] dark:bg-[#3F3D3D]/[0.4] backdrop-blur-2xl fixed w-full z-50 flex flex-row px-4 sm:px-8 md:px-28 py-6 md:py-9 items-center justify-between"
         >
-            <div className="font-primary font-semibold text-dark dark:text-light text-2xl md:text-3xl">
-                Key Success Partners
+            <div className="font-primary flex flex-row gap-5 items-center font-semibold text-dark dark:text-light text-2xl md:text-3xl">
+                <Image 
+                src="/logo.svg"
+                alt="Key Success Partners Logo"
+                width={30}
+                height={10}
+                className="object-contain"
+                />   
+                KeySuccess Partners
             </div>
 
             <button 

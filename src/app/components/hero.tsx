@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { easeIn, motion } from 'framer-motion'; 
 import { Moon, Sun } from 'lucide-react';
 
@@ -29,6 +30,10 @@ export default function Hero() {
 
   return(
     <>
+
+
+{/* old hero */}
+
 {/* <div className="min-h-screen w-full relative">
 
 <div
@@ -102,6 +107,9 @@ export default function Hero() {
 
 
 </div> */}
+
+{/* new hero */}
+
 <div
   className="flex flex-col items-center text-center md:text-left md:items-start px-4 md:px-32 py-48 md:py-68 min-h-screen gap-8 md:gap-18 relative"
   style={{ position: "relative" }}
