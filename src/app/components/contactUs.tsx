@@ -30,7 +30,7 @@ export default function ContactUs() {
                 Contact Us
             </motion.div>
 
-            <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col md:flex-row items-center'>
 
 
 
@@ -74,19 +74,19 @@ export default function ContactUs() {
 
             <div className="flex flex-col gap-12 mt-12 md:mt-0">
 
-                <div className="flex flex-col font-primary px-9 py-8 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-200 rounded-2xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
+                <div className="flex flex-col font-primary px-9 py-8 text-zinc-700 dark:text-zinc-300 gap-8  rounded-2xl backdrop-blur-3xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">
                         <Phone size="32"/> +123456-789
                     </div>
                 </div>
 
-                <div className="flex flex-col font-primary px-9 py-8 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-300 rounded-2xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
+                <div className="flex flex-col font-primary px-9 py-8 text-zinc-700 dark:text-zinc-300 gap-8  rounded-2xl backdrop-blur-3xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">
                         <Mail size="32"/> abc@gmail.com
                     </div>
                 </div>
 
-                <div className="flex flex-col font-primary px-9 py-8 text-zinc-800 dark:text-zinc-300 gap-8 border border-stone-300 rounded-2xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
+                <div className="flex flex-col font-primary px-9 py-8 text-zinc-700 dark:text-zinc-300 gap-8  rounded-2xl backdrop-blur-3xl shadow-[0px_3px_16px_rgba(4,4,4,0.17)]">
                     <div className="flex flex-row gap-6 text-2xl font-medium">
                         <MapPin size="32"/> Mumbai, India
                     </div>

@@ -44,7 +44,7 @@ export default function Services() {
           <motion.div
 
             key={index}
-            className={`flex flex-col ${card.layout} ${card.colSpan} bg-gradient-to-b from-[#B6DBFF]/[0.5] to-[#EAEAEA]/[0.5] dark:from-[#A7D4FF]/[0.2] dark:to-[#08070E] border-stone-300 dark:border-stone-600 px-12 py-12 items-start rounded-lg shadow-[3px_4px_10px_rgba(0,0,0,0.19)] dark:shadow-[0px_7px_20px_rgba(255,255,255,0.2)] hover:shadow-[0px_7px_20px_rgba(0,0,0,0.2)] dark:hover:shadow-[0px_10px_20px_rgba(255,255,255,0.2)] transition-all duration-200 easeInOut`}
+            className={`flex flex-col ${card.layout} ${card.colSpan} bg-gradient-to-b from-[#B6DBFF]/[0.5] to-[#EAEAEA]/[0.5] dark:from-[#A7D4FF]/[0.2] dark:to-[#08070E] border-stone-300 dark:border-stone-600 px-12 py-12 items-start rounded-lg shadow-[3px_4px_10px_rgba(0,0,0,0.19)] dark:shadow-[0px_5px_10px_rgba(255,255,255,0.2)] hover:shadow-[0px_7px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl dark:hover:shadow-[0px_7px_6px_rgba(255,255,255,0.2)] transition-all duration-200 easeInOut`}
           >
             <div>
               <div className="p-4 w-fit mt-8 rounded-lg bg-primary shadow-[0px_3px_10px_rgba(0,0,0,0.3)]">
