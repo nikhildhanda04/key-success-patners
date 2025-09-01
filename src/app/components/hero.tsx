@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { easeIn, motion } from 'framer-motion'; 
 import { Moon, Sun } from 'lucide-react';
 
@@ -120,6 +120,7 @@ export default function Hero() {
       backgroundImage: "url(/hero2.jpg)",
       WebkitMaskImage: "linear-gradient(to right, transparent, white)",
       maskImage: "linear-gradient(to right, transparent, white)",
+      opacity: isDark ? 0.3 : 0.6,
     }}
   ></div>
 
@@ -158,7 +159,7 @@ export default function Hero() {
           initial={{y:-20, opacity: 0, filter: "blur(10px)"}}
           animate={{y:0, opacity:1, filter: "blur(0px)"}}
           transition={{duration: 0.8, ease: easeIn}}
-          className="text-stone-500 dark:text-stone-300 tracking-tight md:text-xl md:pr-40 text-center md:text-left">
+          className="text-stone-700 dark:text-stone-300 tracking-tight md:text-xl md:pr-40 text-center md:text-left">
             with our expertise you get the placement <br/> that is best suited for you.
           </motion.div>
           </div>
